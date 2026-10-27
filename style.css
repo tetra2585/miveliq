@@ -1,0 +1,48 @@
+:root {
+  --bg: #f7f3fb;
+  --surface: #ffffff;
+  --text: #2b2438;
+  --secondary: #6b6378;
+  --primary: #7b62a3;
+  --primary-light: #efe7f8;
+  --border: #e7dff0;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #18141f;
+    --surface: #241e30;
+    --text: #f3eefa;
+    --secondary: #b3a9c4;
+    --primary: #c8b5f3;
+    --primary-light: #342a48;
+    --border: #3a3150;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+}
+main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+header.hero { text-align: center; padding: 8px 0 24px; }
+header.hero img { width: 120px; height: 120px; }
+h1 { font-size: 1.7rem; margin: 8px 0 4px; }
+h2 { font-size: 1.2rem; margin: 32px 0 8px; color: var(--primary); }
+h3 { font-size: 1.02rem; margin: 20px 0 4px; }
+p, li { color: var(--text); }
+.meta { color: var(--secondary); font-size: 0.9rem; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 20px 22px; margin: 16px 0; }
+nav.links { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 16px 0; }
+nav.links a, .button {
+  display: inline-block; padding: 10px 18px; border-radius: 999px; background: var(--primary-light);
+  color: var(--primary); font-weight: 700; text-decoration: none;
+}
+a { color: var(--primary); }
+table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.lang { text-align: right; font-size: 0.9rem; }
+footer { text-align: center; color: var(--secondary); font-size: 0.85rem; margin-top: 48px; }
